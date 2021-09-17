@@ -16,16 +16,16 @@
 
 ### Association
 
-- has_many :items
-- has_many :buys
+- has_many :stores
+- has_many :comments
 
 ## stores テーブル
 
 | Column        | Type       | Options                        |
 | --------------| ---------- | ------------------------------ |
-| item_name     | string     | null: false                    |
-| item_text     | text       | null: false                    |
-| category_id   | integer    | null: false                    |
+| store_name     | string     | null: false                    |
+| store_text     | text       | null: false                    |
+| store_noodle_id   | integer    | null: false                    |
 | postage_id    | integer    | null: false                    |
 | condition_id  | integer    | null: false                    |
 | prefecture_id  | integer    | null: false                    |
@@ -50,19 +50,3 @@
 - belongs_to :user
 - belongs_to :item
 - has_one :shipping_address
-
-## shipping_addresses テーブル
-
-| Column         | Type       | Options                        |
-| -------------- | ---------- | ------------------------------ |
-| postal_code    | string     | null: false                    |
-| prefeture_id   | integer    | null: false                    |
-| city           | string     | null: false                    |
-| address_number | string     | null: false                    |
-| building       | string     |                                |
-| phone_number   | string     | null: false                    |
-| buy            | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :buy
