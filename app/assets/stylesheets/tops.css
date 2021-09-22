@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 6vw;
+  display: flex;
+  flex-direction: column;
+  background-image: url('jiro-top.JPG');
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #3ccace;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+  
+
+}
+
+.category-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.brand-list {
+  text-decoration: none;
+  color: #333333;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.user-nickname:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.user-nickname:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.user-nickname:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
+}
+
+
+.logout {
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.logout:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.logout:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.logout:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
+}
+
+.login {
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.login:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.login:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.login:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
+}
+
+.sign-up {
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.sign-up:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.sign-up:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.sign-up:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.title-contents {
+  width: 100vw;
+  height: 500px;
+  background-image: url('jiro-header01.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 9vh;
+  font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+}
+
+.service-explain {
+  font-size:    4vh;
+  font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+  line-height: 40px;
+}
+
+.store-btn {
+  display: flex;
+  margin-top: 24px;
+}
+
+.apple-btn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.google-btn {
+  height: 9vh;
+}
+
+.select-reason-contents {
+  padding: 5vh 10vw;
+  background-color: #ebec96;
+}
+
+.select-reason-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.select-reason-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #f07c68;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reason-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reason-lists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  height: 200px;
+  width: 100%;
+}
+
+.reason-list-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #dd4444;
+  color: #fff;
+}
+
+.reason-list-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.reason-list-blue-text {
+  color: #ec5965;
+}
+
+.reason-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+

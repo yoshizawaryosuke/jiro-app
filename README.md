@@ -1,24 +1,52 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type    | Options                 |
+| ------------------ | ------  | ----------------------- |
+| email              | string  | null: false, unique:true|
+| encrypted_password | string  | null: false             |
+| nickname           | string  | null: false             |
+| noodle_id          | integer | null: false             |
+| soup_id            | integer | null: false             |
+| meat_id            | integer | null: false             |
+| vegetable_id       | integer | null: false             |
+| garlic_id          | integer | null: false             |
+| oil_id             | integer | null: false             |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :stores
+- has_many :comments
 
-* Configuration
+## stores テーブル
 
-* Database creation
+| Column             | Type       | Options                        |
+| -------------------| ---------- | ------------------------------ |
+| store_name         | string     | null: false                    |
+| store_text         | text       | null: false                    |
+| store_noodle_id    | integer    | null: false                    |
+| store_soup_id      | integer    | null: false                    |
+| store_meat_id      | integer    | null: false                    |
+| store_vegetable_id | integer    | null: false                    |
+| store_garlic_id    | integer    | null: false                    |
+| store_oil_id       | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column       | Type       | Options                           |
+| ------------ | ---------- | --------------------------------- |
+| user         | references | null: false, foreign_key: true    |
+| item         | references | null: false, foreign_key: true    |
+| comment_text | text       | null: false                       |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :store
