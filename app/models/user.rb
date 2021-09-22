@@ -20,7 +20,7 @@ class User < ApplicationRecord
       validates :noodle_id
       validates :soup_id
       validates :meat_id
-      validates :vagetable_id
+      validates :vegetable_id
       validates :garlic_id
       validates :oil_id
     end

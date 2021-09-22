@@ -7,6 +7,7 @@
   padding: 2vh 6vw;
   display: flex;
   flex-direction: column;
+  background-image: url('jiro-top.JPG');
 }
 
 .search-bar-contents {
@@ -76,28 +77,132 @@
 
 
 .user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.user-nickname:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.user-nickname:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.user-nickname:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
 }
 
 
 .logout {
-  text-decoration: none;
-  color: #333333;
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.logout:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.logout:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.logout:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
 }
 
 .login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.login:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.login:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.login:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
 }
 
 .sign-up {
-  text-decoration: none;
-  color: #333333;
+  padding: 1.5rem 4rem;
+
+  -webkit-transform: skew(-15deg);
+
+  transform: skew(-15deg);
+
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #555;
+}
+
+.sign-up:hover:before {
+  top: -3px;
+
+  background: #000;
+}
+
+.sign-up:hover:after {
+  bottom: -3px;
+
+  background: #000;
+}
+
+.sign-up:hover {
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  color: #fff;
 }
 
 a {
@@ -149,11 +254,9 @@ a {
   height: 9vh;
 }
 
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-/* FURIMAが選ばれる3つの理由部分 */
 .select-reason-contents {
-  padding: 5vh 15vw;
+  padding: 5vh 10vw;
+  background-color: #ebec96;
 }
 
 .select-reason-contents>.title {
@@ -168,7 +271,7 @@ a {
   content: '';
   width: 70px;
   height: 4px;
-  background-color: #3ccace;
+  background-color: #f07c68;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -204,7 +307,7 @@ a {
   font-size: 30px;
   text-align: center;
   line-height: 60px;
-  background-color: #3ccace;
+  background-color: #dd4444;
   color: #fff;
 }
 
@@ -215,7 +318,7 @@ a {
 }
 
 .reason-list-blue-text {
-  color: #3ccace;
+  color: #ec5965;
 }
 
 .reason-list-description {
