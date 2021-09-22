@@ -1,23 +1,32 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_many :stores
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :noodle
+  belongs_to :soup
+  belongs_to :meat
+  belongs_to :vegetable
+  belongs_to :garlic
+  belongs_to :oil
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :nickname, presence: true
-
-  with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ } do
-           validates :family_name
-           validates :first_name
-  end
-       
-  with_options presence: true, format: { with: /\A[ァ-ヶー－]+\z/ } do
-    validates :family_name_kana
-    validates :first_name_kana
+  with_options presence: true do
+    validates :nickname
+    with_options numericality: { other_than: 0, message: "can't be blank" } do
+      validates :noodle_id
+      validates :soup_id
+      validates :meat_id
+      validates :vagetable_id
+      validates :garlic_id
+      validates :oil_id
+    end
   end
        
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
     validates :password, format: { with: VALID_PASSWORD_REGEX }
        
-    validates :birthday, presence: true
 end
