@@ -257,6 +257,7 @@ a {
 .select-reason-contents {
   padding: 5vh 10vw;
   background-color: #ebec96;
+  font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
 }
 
 .select-reason-contents>.title {
@@ -359,6 +360,7 @@ a {
   width: 40vh;
   padding: 1vw;
   background-color: #FFF;
+  text-decoration: none;
 }
 
 

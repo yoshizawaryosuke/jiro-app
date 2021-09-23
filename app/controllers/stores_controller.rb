@@ -15,7 +15,7 @@ class StoresController < ApplicationController
   end
 
   def index
-    #@store = Store.order('id DESC')
+    @store = Store.order('id DESC')
   end
 
   def new
