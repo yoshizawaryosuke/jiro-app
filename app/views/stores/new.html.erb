@@ -1,0 +1,91 @@
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">お店の情報を教えてください♪</h2>
+    <%= form_with model: @store, local: true do |f| %>
+
+    <%# render 'shared/error_messages', model: f.object %>
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像の投稿
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /画像 %>
+    <%# 店舗名と説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        店名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :store_name, class:"items-text", id:"item-name", placeholder:"店舗名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          お店の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :store_text, class:"items-text", id:"item-info", placeholder:"お店の説明（必須 1,000文字まで）お店の特徴、注意点など (例）店内入って左側の券売機で食券を買ってから、外で並んで下さい。コールは食券を渡した時です。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /店舗名と説明 %>
+
+    <%# お店の詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">お店の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          麺の硬さ
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:store_noodle_id, StoreNoodle.all, :id, :name, {}, {class:"select-box", id:"store-noodle"}) %>
+        <div class="weight-bold-text">
+          スープの状態
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:store_soup_id, StoreSoup.all, :id, :name, {}, {class:"select-box", id:"store-soup"}) %>
+      </div>
+    </div>
+    <div class="items-detail">
+      <div class="weight-bold-text question-text">
+
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          豚の特徴
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:store_meat_id, StoreMeat.all, :id, :name, {}, {class:"select-box", id:"store-meat"}) %>
+        <div class="weight-bold-text">
+          野菜の特徴
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:store_vegetable_id, StoreVegetable.all, :id, :name, {}, {class:"select-box", id:"store-vegetable"}) %>
+        <div class="weight-bold-text">
+          ニンニクの特徴
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:store_garlic_id, StoreGarlic.all, :id, :name, {}, {class:"select-box", id:"store-garlic"}) %>
+          <div class="weight-bold-text">
+          油の量
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:store_oil_id, StoreOil.all, :id, :name, {}, {class:"select-box", id:"store-oil"}) %>
+      </div>
+    </div>
+    <%# /お店の詳細 %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+</div>

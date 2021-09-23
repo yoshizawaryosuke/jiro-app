@@ -1,3 +1,11 @@
+.login-main{
+  height: 100vh;
+  background-image: url('jiro-registration.jpeg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-btn {
   width: 50%;
   margin: 0 auto;
