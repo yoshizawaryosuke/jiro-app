@@ -117,6 +117,34 @@
     </ul>
   </div>
   <% end %>
+  <div class='footer'>
+  <div class='footer-contents'>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>二郎アプリについて</h2>
+      <ul>
+        <li><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></li>
+        <li><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></li>
+        <li><%= link_to '二郎アプリ利用規約', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>二郎を知る</h2>
+      <ul>
+        <li><%= link_to '直系一覧', "#", class: "footer-link" %></li>
+        <li><%= link_to 'インスパイア系一覧', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>二次使用について</h2>
+      <ul>
+        <li><%= link_to 'コールの仕方ガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to '二郎アプリアイコンガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to 'お知らせ', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+  </div>
+  <p>© JIRO</p>
+</div>
 <%= link_to(new_store_path, class: "purchase-btn") do %>
  <%= image_tag 'icon_jiro.jpg' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
