@@ -80,6 +80,71 @@
       </li>
     </ul>
 </div>
- <%= link_to(class: "purchase-btn") do %>
-  <%= image_tag 'icon_jiro.jpg' , size: '185x50' ,class: "purchase-btn-icon" %>
- <% end %>
+  <div class='item-contents'>
+    <h2 class='title'>店舗一覧</h2>
+    <div class="subtitle" >
+      ニンニク入れますか？
+    </div>
+
+ <ul class='item-lists'>
+  <% if @store.present? %>
+    <% @store.each do |store| %>
+      <li class='list'>
+        <%= link_to store_path(store.id), method: :get do %>
+        <div class='item-img-content'>
+          <%= image_tag store.image, class: "item-img" %>
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= store.store_name %>
+          </h3>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
+  <% else %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "jiro-logo.png", class: "item-img" %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            好きな二郎を投稿しよう！
+          </h3>
+        </div>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+  <div class='footer'>
+  <div class='footer-contents'>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>二郎アプリについて</h2>
+      <ul>
+        <li><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></li>
+        <li><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></li>
+        <li><%= link_to '二郎アプリ利用規約', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>二郎を知る</h2>
+      <ul>
+        <li><%= link_to '直系一覧', "#", class: "footer-link" %></li>
+        <li><%= link_to 'インスパイア系一覧', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>二次使用について</h2>
+      <ul>
+        <li><%= link_to 'コールの仕方ガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to '二郎アプリアイコンガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to 'お知らせ', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+  </div>
+  <p>© JIRO</p>
+</div>
+<%= link_to(new_store_path, class: "purchase-btn") do %>
+ <%= image_tag 'icon_jiro.jpg' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
